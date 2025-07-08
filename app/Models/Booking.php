@@ -14,9 +14,10 @@ class Booking extends Model
         'checkin',
         'checkout',
         'special_request',
-        'guest_name',
-        'guest_email',
-        'guest_phone',
+        'status',
+        'name',
+        'email',
+        'phone',
     ];
 
     public function room()

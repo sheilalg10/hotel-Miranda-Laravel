@@ -16,9 +16,9 @@ return new class extends Migration
             $table->decimal('rate', 8, 2);
             $table->string('room_name');
             $table->text('room_description');
-            $table->string('room_image')->nullable();
-            $table->json('amenities')->nullable();
-            $table->integer('offer')->default(0);
+            $table->string('room_image');
+            $table->json('amenities');
+            $table->integer('offer');
             $table->timestamps();
         });
     }

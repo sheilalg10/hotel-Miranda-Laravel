@@ -9,10 +9,8 @@ class Room extends Model {
     use HasFactory;
     
     protected $primaryKey = 'room_number';
-    public $increment = false;
-    protected $keyType = 'string';
     
-    protected $table = [
+    protected $fillable = [
         'room_number',
         'rate',
         'room_name',
@@ -20,10 +18,6 @@ class Room extends Model {
         'room_image',
         'amenities',
         'offer',
-    ];
-    
-    protected $casts = [
-        'amenities' => 'array',
     ];
     
     public function bookings() {
