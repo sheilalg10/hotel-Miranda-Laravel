@@ -10,6 +10,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Router::get('/about', function () {
+   return view('aboutUs'); 
+});
+
+Router::get('/rooms', function () {
+   return view('rooms'); 
+});
+
+Router::get('/offers', function () {
+   return view('offers'); 
+});
+
+Router::get('/contact', function () {
+   return view('contact'); 
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
