@@ -9,6 +9,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="{{ assets('css/app.css') }}" />
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
@@ -22,9 +23,62 @@
 
         <!-- Page Heading -->
         @isset($header)
-        <header class="bg-white dark:bg-gray-800 shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
+        <!-- HEADER -->
+        <header class="header">
+            <span class="header__span">We Make Your Feel Comfortable</span>
+            <div class="header__div">
+                <div class="header__div__hamburguer" id="hamburguerMenu">
+                    <span class="header__div__hamburguer__span"></span>
+                    <span class="header__div__hamburguer__span"></span>
+                    <span class="header__div__hamburguer__span"></span>
+                </div>
+                <a href="{{ url('/') }}">
+                    <img
+                        class="header__div__logo"
+                        src="./assets/images/title.svg"
+                        alt="Hotel Miranda"
+                        />
+                </a>
+                <nav class="header__div__nav">
+                    <ul class="header__div__nav__list">
+                        <li class="header__div__nav__list__item">
+                            <a
+                                href="{{ url('/about') }}"
+                                class="header__div__nav__list__link"
+                                >About Us</a
+                            >
+                        </li>
+                        <li class="header__div__nav__list__item">
+                            <a href="{{ url('/rooms') }}" class="header__div__nav__list__link"
+                               >Rooms</a
+                            >
+                        </li>
+                        <li class="header__div__nav__list__item">
+                            <a href="{{ url('/offers') }}" class="header__div__nav__list__link"
+                               >Offers</a
+                            >
+                        </li>
+                        <li class="header__div__nav__list__item">
+                            <a
+                                href="{{ url('/contact') }}"
+                                class="header__div__nav__list__link"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__icons">
+                <img
+                    src="assets/images/icons/human.svg"
+                    class="header__icons__icon"
+                    alt="User Icon"
+                    />
+                <img
+                    src="assets/images/icons/lupa.svg"
+                    class="header__icons__icon"
+                    alt="Search Icon"
+                    />
             </div>
         </header>
         @endisset
@@ -37,3 +91,5 @@
 </body>
 
 </html>
+
+<script type="module" src="{{ assets('js/script.js')}}"></script>

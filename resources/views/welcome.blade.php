@@ -13,64 +13,7 @@
         <title>Hotel Miranda</title>
     </head>
     <body>
-        <!-- HEADER -->
-        <header class="header">
-            <span class="header__span">We Make Your Feel Comfortable</span>
-            <div class="header__div">
-                <div class="header__div__hamburguer" id="hamburguerMenu">
-                    <span class="header__div__hamburguer__span"></span>
-                    <span class="header__div__hamburguer__span"></span>
-                    <span class="header__div__hamburguer__span"></span>
-                </div>
-                <a href="./index.html">
-                    <img
-                        class="header__div__logo"
-                        src="./assets/images/title.svg"
-                        alt="Hotel Miranda"
-                        />
-                </a>
-                <nav class="header__div__nav">
-                    <ul class="header__div__nav__list">
-                        <li class="header__div__nav__list__item">
-                            <a
-                                href="./pages/aboutUs.html"
-                                class="header__div__nav__list__link"
-                                >About Us</a
-                            >
-                        </li>
-                        <li class="header__div__nav__list__item">
-                            <a href="./pages/rooms.html" class="header__div__nav__list__link"
-                               >Rooms</a
-                            >
-                        </li>
-                        <li class="header__div__nav__list__item">
-                            <a href="./pages/offers.html" class="header__div__nav__list__link"
-                               >Offers</a
-                            >
-                        </li>
-                        <li class="header__div__nav__list__item">
-                            <a
-                                href="./pages/contact.html"
-                                class="header__div__nav__list__link"
-                                >Contact</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header__icons">
-                <img
-                    src="assets/images/icons/human.svg"
-                    class="header__icons__icon"
-                    alt="User Icon"
-                    />
-                <img
-                    src="assets/images/icons/lupa.svg"
-                    class="header__icons__icon"
-                    alt="Search Icon"
-                    />
-            </div>
-        </header>
+        
         <!-- MAIN -->
         <main>
             <section class="info">
