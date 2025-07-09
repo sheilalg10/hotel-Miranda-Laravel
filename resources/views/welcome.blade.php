@@ -13,64 +13,7 @@
         <title>Hotel Miranda</title>
     </head>
     <body>
-        <!-- HEADER -->
-        <header class="header">
-            <span class="header__span">We Make Your Feel Comfortable</span>
-            <div class="header__div">
-                <div class="header__div__hamburguer" id="hamburguerMenu">
-                    <span class="header__div__hamburguer__span"></span>
-                    <span class="header__div__hamburguer__span"></span>
-                    <span class="header__div__hamburguer__span"></span>
-                </div>
-                <a href="{{ url('/') }}">
-                    <img
-                        class="header__div__logo"
-                        src="./assets/images/title.svg"
-                        alt="Hotel Miranda"
-                        />
-                </a>
-                <nav class="header__div__nav">
-                    <ul class="header__div__nav__list">
-                        <li class="header__div__nav__list__item">
-                            <a
-                                href="{{ url('/about') }}"
-                                class="header__div__nav__list__link"
-                                >About Us</a
-                            >
-                        </li>
-                        <li class="header__div__nav__list__item">
-                            <a href="{{ url('/rooms') }}" class="header__div__nav__list__link"
-                               >Rooms</a
-                            >
-                        </li>
-                        <li class="header__div__nav__list__item">
-                            <a href="{{ url('/offers') }}" class="header__div__nav__list__link"
-                               >Offers</a
-                            >
-                        </li>
-                        <li class="header__div__nav__list__item">
-                            <a
-                                href="{{ url('/contact') }}"
-                                class="header__div__nav__list__link"
-                                >Contact</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header__icons">
-                <img
-                    src="assets/images/icons/human.svg"
-                    class="header__icons__icon"
-                    alt="User Icon"
-                    />
-                <img
-                    src="assets/images/icons/lupa.svg"
-                    class="header__icons__icon"
-                    alt="Search Icon"
-                    />
-            </div>
-        </header>
+
         <!-- MAIN -->
         <main>
             <section class="info">
@@ -541,17 +484,32 @@
         </main>
         <footer>
             <div class="socials">
-                <img class="socials__logo" src="assets/images/logoSolid.png" alt="Hotel Miranda">
+                <img
+                    class="socials__logo"
+                    src="../assets/images/logoSolid.png"
+                    alt="Hotel Miranda"
+                    />
                 <p class="socials__description">
-                    Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore 
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
+                    Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing
+                    eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
                 </p>
                 <ul class="socials__list">
-                    <li class="socials__list__item"><img src="assets/images/icons/facebook.svg" alt="facebook"></li>
-                    <li class="socials__list__item socials__list__item-solid"><img src="assets/images/icons/twitter.svg" alt="twitter"></li>
-                    <li class="socials__list__item"><img src="assets/images/icons/behance.svg" alt="behance"></li>
-                    <li class="socials__list__item"><img src="assets/images/icons/linkedin.svg" alt="linkedin"></li>
-                    <li class="socials__list__item"><img src="assets/images/icons/youtube.svg" alt="youtube"></li>
+                    <li class="socials__list__item">
+                        <img src="../assets/images/icons/facebook.svg" alt="facebook" />
+                    </li>
+                    <li class="socials__list__item socials__list__item-solid">
+                        <img src="../assets/images/icons/twitter.svg" alt="twitter" />
+                    </li>
+                    <li class="socials__list__item">
+                        <img src="../assets/images/icons/behance.svg" alt="behance" />
+                    </li>
+                    <li class="socials__list__item">
+                        <img src="../assets/images/icons/linkedin.svg" alt="linkedin" />
+                    </li>
+                    <li class="socials__list__item">
+                        <img src="../assets/images/icons/youtube.svg" alt="youtube" />
+                    </li>
                 </ul>
             </div>
 
@@ -579,26 +537,44 @@
                 <h3 class="contact__title">Contact us</h3>
 
                 <div class="contact__section">
-                    <img class="contact__section__ico" src="assets/images/icons/phone.svg" alt="phone">
+                    <img
+                        class="contact__section__ico"
+                        src="../assets/images/icons/phone.svg"
+                        alt="phone"
+                        />
                     <div class="contact__section__info">
                         <p class="contact__section__info__title">phone number</p>
-                        <p class="contact__section__info__description">+987 876 765 76 577</p>
+                        <p class="contact__section__info__description">
+                            +987 876 765 76 577
+                        </p>
                     </div>
                 </div>
 
                 <div class="contact__section">
-                    <img class="contact__section__ico" src="assets/images/icons/mail.svg" alt="mail">
+                    <img
+                        class="contact__section__ico"
+                        src="../assets/images/icons/mail.svg"
+                        alt="mail"
+                        />
                     <div class="contact__section__info">
                         <p class="contact__section__info__title">Email</p>
-                        <p class="contact__section__info__description">miranda-hotel@gmail.com</p>
+                        <p class="contact__section__info__description">
+                            miranda-hotel@gmail.com
+                        </p>
                     </div>
                 </div>
 
                 <div class="contact__section">
-                    <img class="contact__section__ico" src="assets/images/icons/map.svg" alt="map">
+                    <img
+                        class="contact__section__ico"
+                        src="../assets/images/icons/map.svg"
+                        alt="map"
+                        />
                     <div class="contact__section__info">
                         <p class="contact__section__info__title">location</p>
-                        <p class="contact__section__info__description">calle san francisco 245, sevilla, españa</p>
+                        <p class="contact__section__info__description">
+                            Calle Floridablanca, 20 San Lorenzo de El Escorial
+                        </p>
                     </div>
                 </div>
             </div>
