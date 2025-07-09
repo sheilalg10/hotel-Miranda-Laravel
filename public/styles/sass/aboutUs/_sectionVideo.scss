@@ -1,0 +1,69 @@
+.sectionVideo{
+    padding: 50px 30px;
+
+    &__video{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
+    }
+    &__h2{
+        @include font($old, 35px, 400, 2rem, $black1);
+        letter-spacing: -1.16px;
+        text-align: center;
+    }
+
+    &__div{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        &__card{
+            @include flex(center, center, column);
+            gap: 12px;
+            width: 100%;
+            height: 158px;
+            
+            &--hidden{
+                display: none;
+            }
+
+            &--solid{
+                background-color: $gold;
+            }
+
+            &__h3{
+                @include font($roboto, 12px, 700, 14px, $black1);
+                text-transform: uppercase;
+                letter-spacing: 2.8px;
+
+                &--solid{
+                    color: $whiteFFF;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .sectionVideo {
+        padding: 60px 20vw;
+    
+        &__video {
+            height: 650px;
+        }
+    
+        &__h2 {
+            @include font($old, 72px, 400, 100%, $black1);
+        }
+    
+        &__div {
+            grid-template-columns: repeat(5, 1fr);
+
+            &__card {    
+                &--hidden {
+                    @include flex(center, center, column);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,164 @@
+.food {
+  margin-top: 40px;
+  @include flex(center, flex-start, column);
+  padding: 100px 20px 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &__span {
+    @include font($roboto, 13px, 700, 18px, $black3);
+    letter-spacing: 2.8px;
+  }
+
+  &__h2 {
+    margin-top: 24px;
+  }
+
+  &__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(40px);
+    width: 140px;
+    height: 140px;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+.swiper.menu {
+  width: 100%;
+  height: 480px;
+  position: relative;
+
+  .swiper-slide__list__item {
+    @include flex(center, flex-start, row);
+    gap: 30px;
+    margin-bottom: 16px;
+
+    &__image {
+      width: 35%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    &__info {
+      width: 60%;
+
+      &__title {
+        @include font($old, 24px, 400, 24px, $black1);
+        margin-bottom: 12px;
+      }
+
+      &__description {
+        @include font($roboto, 14px, 400, 24px, $black1);
+      }
+    }
+  }
+}
+
+.swiper.menu {
+  position: relative;
+}
+
+.swiper-menu-nav {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+}
+
+.swiper-button-prev.menu,
+.swiper-button-next.menu {
+  position: static;
+}
+
+.swiper-button-prev.menu {
+  background: $whiteF9;
+}
+
+.swiper.food {
+  height: 500px;
+  width: 100%;
+  margin: -100px auto 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide.food-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s;
+
+  &.swiper-slide-active {
+    opacity: 1;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  @include flex(center, flex-start, row);
+  z-index: 10;
+
+  .swiper-pagination-bullet {
+    background-color: $whiteF9;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $gold;
+  }
+}
+
+@media (min-width: 1000px) {
+  .food {
+    padding: 200px 15vw 0;
+    overflow: hidden;
+
+    &__span {
+      margin-left: 5px;
+    }
+
+    &__h2 {
+      margin-top: 40px;
+      font-size: 80px;
+    }
+
+    &__image {
+      width: 229px;
+      height: 229px;
+      left: 0;
+      display: block;
+      position: absolute;
+    }
+  }
+
+  .swiper.food {
+    height: 370px;
+    width: 100%;
+    margin: -130px auto 100px;
+    right: 0vw;
+  }
+
+  .swiper-slide.food {
+    img {
+      height: 100%;
+    }
+  }
+}

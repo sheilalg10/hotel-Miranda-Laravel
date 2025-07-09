@@ -1,0 +1,35 @@
+.ameneties {
+  padding: 0 20px;
+
+  &__title {
+    @include font($old, 30px, 400, 30px, $black1);
+    border-bottom: 1px solid $blackD;
+    padding-bottom: 10px;
+    margin-bottom: 36px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item {
+      @include flex(flex-start, center, row);
+      gap: 8px;
+      margin-bottom: 16px;
+
+      &__description {
+        @include font($roboto, 15px, 400, 1rem, $black1);
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .ameneties {
+    padding: 0 20vw;
+
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

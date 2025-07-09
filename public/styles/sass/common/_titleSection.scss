@@ -1,0 +1,42 @@
+.title {
+  background-color: $black1;
+  @include flex(center, flex-start, column);
+  padding: 180px 10vw 100px;
+  position: relative;
+
+  &__span {
+    @include font($roboto, 13px, 700, 18px, $whiteFFF);
+    letter-spacing: 2.8px;
+    margin-bottom: 24px;
+  }
+  &__h1 {
+    @include font($old, 56px, 400, 60px, $whiteFFF);
+    text-transform: capitalize;
+  }
+  &__div {
+    position: absolute;
+    bottom: -5px;
+    right: 5vw;
+    background: white;
+    padding: 16px 24px;
+    &__p{
+        @include font($roboto, 16px, 700, 18px, $black1);
+
+        span {
+            color: $gold;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+    .title {
+        padding: 180px 20vw 96px;
+
+        &__div {
+            right: 20vw;
+        }
+    }
+}

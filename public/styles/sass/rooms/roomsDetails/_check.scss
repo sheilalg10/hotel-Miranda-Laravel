@@ -1,0 +1,77 @@
+.check {
+  padding: 20px 40px;
+
+  &__h2 {
+    @include font($roboto, 18px, 700, 1rem, $black1);
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  &__form {
+    @include flex(center, flex-start, column);
+    gap: 20px;
+
+    &__div {
+      @include flex(center, flex-start, column);
+      gap: 8px;
+
+      &__label {
+        @include font($roboto, 14px, 700, 1rem, $black1);
+      }
+
+      &__input {
+        padding: 24px 130px 24px 29px;
+        border: none;
+        background: $blackD;
+        color: $black3;
+        width: 75vw;
+
+        &::-webkit-calendar-picker-indicator {
+          cursor: pointer;
+          position: absolute;
+          right: 100px;
+          width: 29px;
+          height: 20px;
+          opacity: 0.7;
+        }
+      }
+
+      &__info__div__buttons__button {
+        width: 75vw;
+      }
+    }
+  }
+
+  &__p {
+    opacity: 0.6;
+    margin: 60px -10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .check {
+    position: absolute;
+    right: 20vw;
+    top: 500px;
+    width: 370px;
+    height: 380px;
+
+    &__form {
+      @include flex(center, flex-start, column);
+      gap: 20px;
+
+      &__div {
+        &__input {
+          width: 14vw;
+        }
+      }
+    }
+
+    &__p {
+      position: absolute;
+      left: -39.5vw;
+      bottom: -480px;
+      width: 40vw;
+    }
+  }
+}

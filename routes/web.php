@@ -10,19 +10,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Router::get('/about', function () {
+Route::get('/about', function () {
    return view('aboutUs'); 
 });
 
-Router::get('/rooms', function () {
+Route::get('/rooms', function () {
    return view('rooms'); 
 });
 
-Router::get('/offers', function () {
+Route::get('/offers', function () {
    return view('offers'); 
 });
 
-Router::get('/contact', function () {
+Route::get('/contact', function () {
    return view('contact'); 
 });
 

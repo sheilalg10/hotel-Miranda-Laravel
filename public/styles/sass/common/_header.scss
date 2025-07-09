@@ -1,0 +1,166 @@
+.header {
+  width: 100%;
+  padding: 0 30px;
+  box-shadow: 0px 3px 6px 0px $black4A;
+  position: fixed;
+  @include flex(space-between, center, row);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: $whiteFFF;
+  transition: all 5s;
+
+  &__span {
+    display: none;
+  }
+
+  &__div {
+    @include flex(center, center, row);
+
+    &__hamburguer {
+      @include flex(center, center, column);
+      width: 25px;
+      gap: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &__span {
+        width: 100%;
+        height: 2px;
+        background-color: $black1;
+        transition: all 0.3s ease;
+      }
+    }
+
+    &__hamburguer.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px);
+      }
+    }
+
+    &__logo {
+      width: 110px;
+      position: relative;
+      top: 10px;
+      margin-left: 20px;
+    }
+
+    &__nav {
+      display: none;
+
+      &__list {
+        display: none;
+        &__link{
+          text-decoration: none;
+          color: $black1;
+          font-family: $roboto;
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .header__div__nav.active {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $whiteFFF;
+      padding: 2rem 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+
+      .header__div__nav__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        list-style: none;
+
+        .header__div__nav__list__item {
+          width: 100%;
+
+          .header__div__nav__list__link {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            width: 100%;
+
+            &:hover {
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__icons {
+    @include flex(center, center, row);
+    gap: 18px;
+  }
+}
+
+// RESPONSIVE 1000PX
+
+@media screen and (min-width: 1000px) {
+  .header {
+    width: 80vw;
+    margin: 30px 10vw;
+    max-height: 100px;
+
+    &__span {
+      display: block;
+      position: absolute;
+      top: -25px;
+      color: $whiteFFF;
+    }
+    &__div {
+      &__hamburguer {
+        display: none;
+      }
+      &__logo {
+        width: 210px;
+        position: relative;
+        top: 20px;
+        margin-right: 5vw;
+      }
+      &__nav {
+        display: flex;
+        &__list {
+          @include flex(center, flex-start, row);
+          gap: 40px;
+          &__item {
+            list-style: none;
+          }
+          &__link {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &__icons {
+      @include flex(center, center, row);
+      gap: 20px;
+      margin-right: 5vw;
+      gap: 30px;
+      &__icon {
+        border: 2px solid gray;
+        padding: 0.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

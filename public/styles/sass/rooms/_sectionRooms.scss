@@ -1,0 +1,78 @@
+.sectionrooms {
+    padding: 48px 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px;
+
+    &__item {
+        position: relative;
+        text-align: center;
+        width: 95%;
+
+        &__image {
+            width: 100%;
+            height: 240px
+        }
+
+        &__title {
+            @include font($old, 24px, 400, 24px, $black1);
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            width: 80%;
+            margin: 0 auto 20px;
+        }
+
+        &__actions {
+            &__price {
+                @include font($roboto, 16px, 700, 24px, $gold);
+
+                a {
+                    margin-left: 20px;
+                    opacity: .5;
+                    text-decoration: none;
+                    color: $black1;
+                }
+            }
+        }
+    }
+}
+
+.rooms__icons.sectionrooms__item {
+    top: -20px;
+    width: 70%;
+}
+
+.pagination {
+    width: 90%;
+    @include flex(flex-start, center, row);
+    margin: 0 auto -40px;
+    gap: 12px;
+
+    &__numb {
+        @include flex(center, center, row);
+        width: 39px;
+        height: 39px;
+        @include font($roboto, 14px, 700, 19px, $black1);
+
+        &.active {
+            color: $whiteFFF;
+            background: $gold;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .sectionrooms {
+        padding: 48px 20vw;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    .pagination {
+        grid-column: 1 / -1;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}

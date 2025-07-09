@@ -1,0 +1,14 @@
+@mixin flex ($j-content, $a-items, $f-direction){
+    display: flex;
+    justify-content: $j-content;
+    align-items: $a-items;
+    flex-direction: $f-direction;
+}
+
+@mixin font ($f_family, $f_size, $f_weight, $f_line, $f_color){
+    font-family: $f_family;
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $f_line;
+    color: $f_color;
+}

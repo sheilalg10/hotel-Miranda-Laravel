@@ -1,0 +1,82 @@
+.sectionCounter {
+  padding: 40px 20px 0;
+
+  &__span {
+    @include font($roboto, 13px, 700, 18px, $black1);
+    letter-spacing: 2.8px;
+  }
+
+  &__h2 {
+    margin-top: 20px;
+  }
+
+  &__div {
+    @include flex(center, flex-start, column);
+    margin-top: 16px;
+    gap: 16px;
+
+    &__item {
+      @include flex(flex-start, center, row);
+      padding: 25px 20px;
+      gap: 14px;
+      width: 100%;
+
+      &__div {
+        &__h3 {
+          @include font($old, 60px, 400, 60px, $black1);
+          letter-spacing: -1.8px;
+        }
+
+        &__p {
+          @include font($roboto, 16px, 400, 16px, $black1);
+        }
+      }
+
+      &__arrow {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .counter {
+    width: 100%;
+    height: 240px;
+    margin-bottom: -20px;
+  }
+
+  .swiper-pagination.counter {
+    position: absolute;
+    bottom: -180px;
+    left: 0;
+    right: 0;
+    @include flex(center, flex-start, row);
+    z-index: 10;
+
+    .swiper-pagination-bullet {
+      background-color: $whiteF9;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $gold;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .sectionCounter {
+    padding: 80px 18vw 0;
+
+    &__div {
+      @include flex(center, flex-start, row);
+      gap: 90px;
+    }
+
+    .counter {
+      height: 400px;
+      .swiper-pagination.counter{
+        display: none;
+      }
+    }
+  }
+}

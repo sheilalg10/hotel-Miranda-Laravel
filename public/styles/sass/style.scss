@@ -1,0 +1,34 @@
+@import "./mixins";
+@import "./variables";
+@import "common/header";
+@import "home/info";
+@import "home/aboutUs";
+@import "home/rooms";
+@import "home/video";
+@import "common/facilities";
+@import "home/food";
+@import "home/statistics";
+@import "common/titleSection";
+@import "aboutUs/sectionVideo";
+@import "aboutUs/sectionRestaurant";
+@import "aboutUs/sectionCounter";
+@import "rooms/sectionRooms";
+@import "rooms/roomsDetails/sectionDetails";
+@import "rooms/roomsDetails/check";
+@import "rooms/roomsDetails/ameneties";
+@import "rooms/roomsDetails/sectionClient";
+@import "rooms/roomsDetails/sectionReleated";
+@import "offers/sectionOffers";
+@import "offers/popularRooms";
+@import "contact/_contactList";
+@import "contact/_formSection";
+@import "common/footer";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-width: 320px;
+}

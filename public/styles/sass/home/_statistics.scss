@@ -1,0 +1,38 @@
+.statistics {
+    background: black;
+    @include flex(center, center, column);
+    padding: 50px 0;
+    gap: 60px;
+    width: 100%;
+
+    &__div {
+        @include flex(center, center, column);
+
+        &__image {
+            margin-bottom: 50px
+        }
+
+        &__h2 {
+            @include font($roboto, 60px, 700, 1.4rem, $whiteFFF);
+            margin-bottom: 12px;
+        }
+
+        &__p {
+            @include font($roboto, 16px, 400, 1.4rem, $white54);
+            text-transform: capitalize;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .statistics {
+        @include flex(center, center, row);
+        gap: 100px;
+        width: 80%;
+        margin: 0 auto;
+
+        &__item {
+            @include flex(center, flex-start, column);
+        }
+    }
+}

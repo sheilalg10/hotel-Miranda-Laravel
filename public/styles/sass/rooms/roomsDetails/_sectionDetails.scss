@@ -1,0 +1,60 @@
+.sectionDetails {
+  padding: 40px 20px;
+
+  &__div {
+    @include flex(center, flex-start, column);
+
+    &__span {
+      @include font($roboto, 13px, 700, 18px, $black1);
+      letter-spacing: 2.8px;
+    }
+
+    &__h2 {
+      @include font($old, 40px, 400, 48px, $black1);
+      letter-spacing: -1.4px;
+    }
+
+    &__p {
+      @include font($roboto, 32px, 700, 43px, $gold);
+      margin: 16px 0;
+
+      span {
+        @include font($roboto, 13px, 700, 43px, $gold);
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 214px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1000px) {
+  .sectionDetails {
+    width: 60%;
+    padding: 120px 0 370px 20vw;
+
+    &__div {
+      position: relative;
+      width: 95%;
+      z-index: 20;
+      background: white;
+      padding: 1rem 3rem;
+
+      &__p {
+        position: absolute;
+        right: 3rem;
+        top: 1rem;
+      }
+    }
+
+    &__img {
+      height: 490px;
+      position: relative;
+      top: -40px;
+    }
+  }
+}
